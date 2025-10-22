@@ -13,9 +13,17 @@
       background-color: #f4f4f4;
     }
     .container {
+      /* Modification pour permettre un affichage vertical correct sous le logo */
       display: flex;
       align-items: center;
       gap: 40px;
+    }
+    .image-block {
+      /* Nouveau conteneur pour l'image du logo et le lien en dessous */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px; /* Espace entre le logo et le nouveau rectangle */
     }
     .container img {
       height: 150px; /* même taille pour les 3 images */
@@ -26,25 +34,46 @@
     .container img:hover {
       transform: scale(1.05);
     }
+    .battery-link {
+      /* Style pour le nouveau rectangle */
+      display: block;
+      padding: 15px 25px;
+      background-color: #0087c5; /* Bleu Makita */
+      color: white;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      border-radius: 5px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.2s ease, transform 0.2s ease;
+      /* Assurer une largeur raisonnable pour le texte */
+      width: 250px; /* Ajustez au besoin */
+    }
+    .battery-link:hover {
+      background-color: #00608c; /* Bleu plus foncé au survol */
+      transform: scale(1.03);
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Image gauche -->
     <a href="https://partage-support-technique.github.io/debrousailleuse/" target="_blank">
       <img src="https://fi.makitamedia.com/images/3_Makita/301_machines/3011_a_GS1/30120_JPG_zoom/DUR368ARF2_C2L0.jpg" alt="Débroussailleuse Makita">
     </a>
 
-    <!-- Logo Makita au milieu -->
-    <a href="https://www.makita.fr/" target="_blank">
-      <img src="https://www.makita.fr/data/pam/public/makita_logo3.png" alt="Logo Makita">
-    </a>
+    <div class="image-block">
+      <a href="https://www.makita.fr/" target="_blank">
+        <img src="https://www.makita.fr/data/pam/public/makita_logo3.png" alt="Logo Makita">
+      </a>
+      <a href="https://partage-support-technique.github.io/batterie-9-et-12-LXT.io/" target="_blank" class="battery-link">
+        Compatibilité batterie LXT 9 et 12Ah
+      </a>
+    </div>
 
-    <!-- Image droite -->
     <a href="https://partage-support-technique.github.io/tronconneuse/" target="_blank">
       <img src="https://fi.makitamedia.com/images/3_Makita/301_machines/3011_a_GS1/30120_JPG_zoom/UC011GZ01_C8L0.jpg" alt="Tronçonneuse Makita">
     </a>
   </div>
 </body>
 </html>
-
